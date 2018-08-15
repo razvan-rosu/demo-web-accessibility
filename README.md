@@ -1,2 +1,2 @@
 # demo-web-accessibility
-web accessiblity, a11y, WAI-ARIA
+This demo has been created to accompany a presentation on web accessibility
