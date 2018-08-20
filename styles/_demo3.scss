@@ -31,68 +31,7 @@
     text-align: left;
   }
 
-  .button {
-    display: inline-block;
-    /* remove 300ms tap delay */
-    touch-action: manipulation;
-    /* remove default accesibility outline (replacing with box-shadow on :focus) */
-    outline: none;
-    /* unselectable content  */
-    -webkit-touch-callout: none;
-    user-select: none;
-
-    /* hidden button a11y label */
-    &-label {
-      display: none;
-    }
-
-    /* ghost button styling */
-    &--ghost {
-      padding: 8px 16px;
-      background: none;
-      color: #ff2400;
-      border: 1px solid #ff2400;
-      border-radius: 4px;
-      transition: box-shadow 200ms ease-in;
-
-      &:hover,
-      &:focus {
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-      }
-
-      &:active {
-        background-color: #ff2400;
-        color: #fff;
-      }
-    }
-
-    /* batman button styling */
-    &--batman {
-      padding: 0;
-      height: 57px;
-      border: none;
-      border-radius: 50px/30px;
-      color: #fff;
-
-      &:hover,
-      &:focus {
-        color: rgb(255, 223, 0);
-        box-shadow: 0 0 50px 0 rgba(255, 223, 0, 1);
-      }
-    }
-
-    &:disabled,
-    &--disabled {
-      /* unclickable */
-      pointer-events: none;
-      /* disabled styling */
-      cursor: not-allowed;
-      opacity: 0.3;
-
-      &:hover {
-        /* cancel drop shadow */
-        box-shadow: none;
-      }
-    }
+  .SectionBatman {
+    margin-bottom: 20px;
   }
 }
