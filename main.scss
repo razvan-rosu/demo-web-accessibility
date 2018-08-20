@@ -6,7 +6,7 @@
 
 body {
   background: #fff;
-  min-height: 100vh;
+  color: #000;
 }
 
 .container {
@@ -17,20 +17,21 @@ body {
     margin-right: auto;
     width: 800px;
   }
+}
 
-  @media only screen and (min-width: 1920px) {
-    .Accessibility & {
-      width: 1900px;
-    }
+.Footer {
+  background-color: #2c3e50;
+  text-align: center;
+  color: #fff;
+
+  &-text {
+    //a11y screen reader - ignore text
+    speak: none;
   }
 }
 
-.A11y-hidden {
-  display: none;
-  visibility: hidden;
-}
-
 @import 'styles/_index.scss';
+@import 'styles/_accessibility.scss';
 @import 'styles/_demo1.scss';
 @import 'styles/_demo2.scss';
 @import 'styles/_demo3.scss';
