@@ -44,10 +44,10 @@
   .Article {
     display: block;
     padding: 10px 20px;
-    border: 1px solid #7f8c8d;
+    border: 1px solid #2c3e50;
 
     &-title {
-      color: #7f8c8d;
+      color: #2c3e50;
     }
 
     &-list {
@@ -60,11 +60,5 @@
     display: block;
     border: none;
     flex-grow: 1;
-  }
-
-  .Footer {
-    background-color: #2c3e50;
-    text-align: center;
-    color: #fff;
   }
 }
