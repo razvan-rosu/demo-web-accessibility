@@ -1,0 +1,27 @@
+{
+  "name": "demo-web-accessibility",
+  "version": "1.0.0",
+  "description": "web accessibility, a11y, wai-aria",
+  "scripts": {
+    "start": "-"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razvan-rosu/demo-web-accessibility.git"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wai-aria"
+  ],
+  "author": "Răzvan Roșu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/razvan-rosu/demo-web-accessibility/issues"
+  },
+  "homepage": "https://github.com/razvan-rosu/demo-web-accessibility#readme",
+  "dependencies": {
+    "node-normalize-scss": "^8.0.0",
+    "stylelint": "^9.4.0"
+  }
+}
