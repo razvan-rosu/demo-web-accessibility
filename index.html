@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web accessibility page title</title>
+    <meta name="description" content="web accessibility, a11y, wai-aria">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body class="Landingpage">
+    <header class="Header" aria-labelledby="Header-label">
+      <h1 class="Header-title" id="Header-label">Web accessibility demos</h1>
+    </header>
+
+    <nav role="navigation" class="Navigation">
+      <ol role="menu" aria-label="Website Menu">
+        <li role="menuitem"><a href="pages/demo1.html">demo 1</a></li>
+        <li role="menuitem"><a href="pages/demo2.html">demo 2</a></li>
+        <li role="menuitem"><a href="pages/demo3.html">demo 3</a></li>
+        <li role="menuitem"><a href="pages/demo4.html">demo 4</a></li>
+      </ol>
+    </nav>
+
+    <main class="MainContent" role="main" aria-labelledby="Main-label">
+      <div class="container">
+        <h2 id="Main-label" class="A11y-hidden">Website content</h2>
+
+        <ul class="MainContent-list">
+          <li class="MainContent-listItem">
+            <article class="Article" aria-labelledby="ArticleTitle">
+              <h3 class="Article-title" id="ArticleTitle">About</h3>
+              <p>This demo is meant to accompany a presentation on Web Accessibility.</p>
+              <p>The presentation can be viewed <a href="http://slideshare.net/geegee">here</a></p>
+            </article>
+          </li>
+          <li class="MainContent-listItem">
+            <article class="Article" aria-labelledby="Article2Title">
+              <h3 class="Article-title" id="Article2Title">Resources</h3>
+              <p>Here is a list of insightful resources used to accomplish this demo:</p>
+              <ul class="Article-list" role="navigation">
+                <li><a href="#">resource 1</a></li>
+                <li><a href="#">resource 2</a></li>
+                <li><a href="#">resource 3</a></li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <hr class="FlexboxFiller">
+
+    <footer class="Footer" role="contentinfo">
+      <p class="Footer-text">Made with <3 by Răzvan Roșu</p>
+    </footer>
+  </body>
+</html>
