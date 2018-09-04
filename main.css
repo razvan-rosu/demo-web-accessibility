@@ -341,7 +341,7 @@ template {
 
 body {
   background: #fff;
-  min-height: 100vh;
+  color: #000;
 }
 
 .container {
@@ -356,15 +356,17 @@ body {
   }
 }
 
-@media only screen and (min-width: 1920px) {
-  .Accessibility .container {
-    width: 1900px;
-  }
+.Footer {
+  background-color: #2c3e50;
+  text-align: center;
+  color: #fff;
 }
 
-.A11y-hidden {
-  display: none;
-  visibility: hidden;
+.Footer-text {
+  speak: none;
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .Landingpage {
@@ -429,11 +431,11 @@ body {
 .Landingpage .Article {
   display: block;
   padding: 10px 20px;
-  border: 1px solid #7f8c8d;
+  border: 1px solid #2c3e50;
 }
 
 .Landingpage .Article-title {
-  color: #7f8c8d;
+  color: #2c3e50;
 }
 
 .Landingpage .Article-list {
@@ -449,14 +451,162 @@ body {
           flex-grow: 1;
 }
 
-.Landingpage .Footer {
-  background-color: #2c3e50;
-  text-align: center;
+.Accessibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 1920px) {
+  .Accessibility .container {
+    width: 1900px;
+  }
+}
+
+.A11y-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.Button {
+  display: inline-block;
+  /* remove 300ms tap delay */
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  /* remove default accesibility outline (replacing with box-shadow on :focus) */
+  outline: none;
+  /* unselectable content  */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /* hidden button a11y label */
+  /* ghost button styling */
+  /* batman button styling */
+}
+
+.Button-label {
+  display: none;
+}
+
+.Button--ghost {
+  padding: 8px 16px;
+  background: none;
+  color: #ff2400;
+  border: 1px solid #ff2400;
+  border-radius: 4px;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in;
+  transition: -webkit-box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in, -webkit-box-shadow 200ms ease-in;
+}
+
+.Button--ghost:hover, .Button--ghost:focus {
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.Button--ghost:active {
+  background-color: #ff2400;
   color: #fff;
 }
 
+.Button--batman {
+  padding: 0;
+  height: 57px;
+  border: none;
+  border-radius: 50px/30px;
+  color: #fff;
+}
+
+.Button--batman:hover, .Button--batman:focus {
+  color: #ffdf00;
+  -webkit-box-shadow: 0 0 50px 0 #ffdf00;
+          box-shadow: 0 0 50px 0 #ffdf00;
+}
+
+.Button:disabled, .Button--disabled {
+  /* unclickable */
+  pointer-events: none;
+  /* disabled styling */
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.Button:disabled:hover, .Button--disabled:hover {
+  /* cancel drop shadow */
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .Accessibility--demo1 {
-  background-color: #F00;
+  padding: 10px;
+}
+
+.Accessibility--demo1 .container {
+  max-width: 700px;
+}
+
+.Accessibility--demo1 .Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.Accessibility--demo1 .Header-text {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.Accessibility--demo1 .Header-image {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 200px;
+  height: 200px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.Accessibility--demo1 .Header-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.Accessibility--demo1 .Section {
+  padding: 10px 25px;
+  border: 1px solid #ccc;
+}
+
+.Accessibility--demo1 .Section-videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.Accessibility--demo1 .Section-videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .Accessibility--demo2 {
@@ -494,76 +644,8 @@ body {
   text-align: left;
 }
 
-.Accessibility--demo3 .button {
-  display: inline-block;
-  /* remove 300ms tap delay */
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  /* remove default accesibility outline (replacing with box-shadow on :focus) */
-  outline: none;
-  /* unselectable content  */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  /* hidden button a11y label */
-  /* ghost button styling */
-  /* batman button styling */
-}
-
-.Accessibility--demo3 .button-label {
-  display: none;
-}
-
-.Accessibility--demo3 .button--ghost {
-  padding: 8px 16px;
-  background: none;
-  color: #ff2400;
-  border: 1px solid #ff2400;
-  border-radius: 4px;
-  -webkit-transition: -webkit-box-shadow 200ms ease-in;
-  transition: -webkit-box-shadow 200ms ease-in;
-  transition: box-shadow 200ms ease-in;
-  transition: box-shadow 200ms ease-in, -webkit-box-shadow 200ms ease-in;
-}
-
-.Accessibility--demo3 .button--ghost:hover, .Accessibility--demo3 .button--ghost:focus {
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-.Accessibility--demo3 .button--ghost:active {
-  background-color: #ff2400;
-  color: #fff;
-}
-
-.Accessibility--demo3 .button--batman {
-  padding: 0;
-  height: 57px;
-  border: none;
-  border-radius: 50px/30px;
-  color: #fff;
-}
-
-.Accessibility--demo3 .button--batman:hover, .Accessibility--demo3 .button--batman:focus {
-  color: #ffdf00;
-  -webkit-box-shadow: 0 0 50px 0 #ffdf00;
-          box-shadow: 0 0 50px 0 #ffdf00;
-}
-
-.Accessibility--demo3 .button:disabled, .Accessibility--demo3 .button--disabled {
-  /* unclickable */
-  pointer-events: none;
-  /* disabled styling */
-  cursor: not-allowed;
-  opacity: 0.3;
-}
-
-.Accessibility--demo3 .button:disabled:hover, .Accessibility--demo3 .button--disabled:hover {
-  /* cancel drop shadow */
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.Accessibility--demo3 .SectionBatman {
+  margin-bottom: 20px;
 }
 
 .Accessibility--demo4 {
