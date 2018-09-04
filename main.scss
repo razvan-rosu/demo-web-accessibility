@@ -27,6 +27,9 @@ body {
   &-text {
     //a11y screen reader - ignore text
     speak: none;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 }
 
