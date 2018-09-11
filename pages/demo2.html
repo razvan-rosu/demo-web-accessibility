@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Demo 2</title>
+    <title>Demo 2: Semantic HTML 5 CV</title>
+    <meta name="description" content="web accessibility">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css">
 </head>
-<body>
-    <h1>Demo 2</h1>
+<body class="Accessibility Accessibility--demo1">
+  <div class="container">
+
+    <header class="Header">
+
+      <hgroup class="Header-text">
+        <h1>Curriculum Vitae</h1>
+        <h2>Fred</h2>
+      </hgroup>
+
+      <figure class="Header-image">
+        <img src="../images/fred.png" alt="Image of Fred" title="Fred" />
+        <figcaption>Profile picture of Fred</figcaption>
+      </figure>
+
+    </header>
+
+    <main>
+      <section class="Section">
+        <h3>About me</h3>
+        <blockquote>
+          <p><q>I am man of many skills and want to join tribe!</q></p>
+        </blockquote>
+        <iframe width="647" height="315" src="https://www.youtube.com/embed/b56eAUCTLok" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </section>
+
+      <section class="Section">
+        <h3>Contact info</h3>
+        <address>Address: 301 Cobblestone Way, Bedrock 70777</address>
+        <ul>
+          <li><a href="tel:+40740000000">0740.000.000</a></li>
+          <li><a href="https://www.linkedin.com/in/fred/">LinkedIn</a></li>
+          <li><a href="mailto:fred@gmail.com">Gmail</a></li>
+        </ul>
+      </section>
+
+      <section class="Section">
+        <h3>Experience</h3>
+        <ul>
+          <li>
+            <p>Position: <strong>Senior Gatherer</strong></p>
+            <p>Tribe: <strong>Cavemen Inc</strong></p>
+            <p>Period: <strong>10 moons</strong></p>
+          </li>
+          <li>
+            <p>Position: <strong>Expert Hunter</strong></p>
+            <p>Tribe: <strong>DinoHunt SA</strong></p>
+            <p>Period: <strong>25 moons</strong></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="Section">
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <p><strong>University of Bedrock - Fishing</strong></p>
+            <p>Bachelor in Fishing</p>
+            <p>Period: <strong>4 moons</strong></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="Section">
+        <h3>Volunteer Experience</h3>
+        <p>Volunteer</p>
+        <p>Save the Mammoths ONG</p>
+      </section>
+
+      <section class="Section">
+        <h3>Abilities</h3>
+        <ul>
+          <li>hunting</li>
+          <li>gathering</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="Footer">
+      <p class="Footer-text">January 1, 100 BC</p>
+    </footer>
+
+  </div>
 </body>
 </html>
