@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Web accessibility page title</title>
+    <title>Demo 3 - Buttons</title>
     <meta name="description" content="web accessibility, a11y, wai-aria">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/main.css">
@@ -13,32 +13,181 @@
       <h1>Demo 3 - Buttons</h1>
     </header>
     <main>
-      <div class="container">
-        <table>
-          <thead>
-            <th>Demo</th>
-            <th>Default</th>
-            <th>Styled Button</th>
-            <th>Fake Button</th>
-            <th>Accessible fake Button</th>
-          </thead>
-          <tbody>
-            <!-- Row with text Button -->
-            <tr>
-              <td><label for="">Button with text</label></td>
-              <td><Button type="Button">Click me!</Button></td>
-              <td><Button type="Button" class="Button Button--ghost">Click me!</Button></td>
-              <td><span class="Button Button--ghost" onClick="alert('click!');">Click me!</span></td>
-              <td><span class="Button Button--ghost" onClick="alert('click!');" role="Button" tabindex="0">Click me!</span></td>
-            </tr>
-            <!-- Row with CODE for text Button -->
-            <tr aria-hidden="true">
+      <table>
+        <thead>
+          <th>Demo</th>
+          <th>Default</th>
+          <th>Styled Button</th>
+          <th>Fake Button</th>
+          <th>Accessible fake Button</th>
+        </thead>
+        <tbody>
+          <!-- Row with text Button -->
+          <tr>
+            <td><label for="">Button with text</label></td>
+            <td><Button type="Button">Click me!</Button></td>
+            <td><Button type="Button" class="Button Button--ghost">Click me!</Button></td>
+            <td><span class="Button Button--ghost" onClick="alert('click!');">Click me!</span></td>
+            <td><span class="Button Button--ghost" onClick="alert('click!');" role="Button" tabindex="0">Click me!</span></td>
+          </tr>
+          <!-- Row with CODE for text Button -->
+          <tr aria-hidden="true">
+            <td><label for="">code</label></td>
+            <td>
+  <pre>
+  <code>
+  &lt;Button type="Button"&gt;
+    Click me!
+  &lt;/Button&gt;
+  </code>
+  </pre>
+            </td>
+            <td>
+  <pre>
+  <code>
+  &lt;Button type="Button"
+          class="Button"&gt;
+    Click me!
+  &lt;/Button&gt;
+  </code>
+  </pre>
+            </td>
+            <td>
+  <pre>
+  <code>
+  &lt;span class="Button"&gt;
+    Click me!
+  &lt;/span&gt;
+  </code>
+  </pre>
+            </td>
+            <td>
+  <pre>
+  <code>
+  &lt;span class="Button"
+        role="Button"
+        tabindex="0"&gt;
+    Click me!
+  &lt;/span&gt;
+  </code>
+  </pre>
+            </td>
+          </tr>
+          <!-- Row with disabled text Button -->
+          <tr>
+            <td><label for="">Disabled Button</label></td>
+            <td><Button type="Button" disabled="disabled">Click me!</Button></td>
+            <td><Button type="Button" disabled="disabled" class="Button Button--ghost">Click me!</Button></td>
+            <td><span class="Button Button--ghost Button--disabled" onClick="alert('click!');">Click me!</span></td>
+            <td><span class="Button Button--ghost Button--disabled" onClick="alert('click!');" role="Button" tabindex="0" aria-disabled="true">Click me!</span></td>
+          </tr>
+          <!-- Row with CODE for disabled text Button -->
+          <tr aria-hidden="true">
+            <td><label for="">code</label></td>
+            <td>
+  <pre>
+  <code>
+  &lt;Button type="Button"
+          disabled="disabled"&gt;
+    Click me!
+  &lt;/Button&gt;
+  </code>
+  </pre>
+            </td>
+            <td>
+  <pre>
+  <code>
+  &lt;Button type="Button"
+          class="Button"
+          disabled="disabled"&gt;
+    Click me!
+  &lt;/Button&gt;
+  </code>
+  </pre>
+            </td>
+            <td>
+  <pre>
+  <code>
+  &lt;span class="Button
+        Button--disabled"&gt;
+    Click me!
+  &lt;/span&gt;
+  </code>
+  </pre>
+            </td>
+            <td>
+  <pre>
+  <code>
+  &lt;span class="Button
+        Button--disabled"
+        role="Button"
+        tabindex="0"
+        aria-disabled="true"&gt;
+    Click me!
+  &lt;/span&gt;
+  </code>
+  </pre>
+            </td>
+          </tr>
+          <!-- Row with icon Button -->
+          <tr>
+            <td><label for="">Button with icon</label></td>
+            <td>
+              <Button type="Button">
+                <svg  width="100"
+                      height="56.785"
+                      version="1.1"
+                      viewBox="0 0 1000 567.849"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:cc="http://creativecommons.org/ns#"
+                      xmlns:dc="http://purl.org/dc/elements/1.1/"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <g transform="translate(0 -484.51)">
+                    <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/>
+                    <path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="#fff"/>
+                    <path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/>
+                  </g>
+                </svg>
+              </Button>
+            </td>
+            <td>
+              <Button type="Button" class="Button Button--batman" aria-label="Batman">
+                <span class="A11y-hidden">Batman</span>
+                <svg  aria-hidden="true"
+                      width="100"
+                      height="56.785"
+                      version="1.1"
+                      viewBox="0 0 1000 567.849"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:cc="http://creativecommons.org/ns#"
+                      xmlns:dc="http://purl.org/dc/elements/1.1/"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <g transform="translate(0 -484.51)">
+                    <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/>
+                    <path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/>
+                    <path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/>
+                  </g>
+                </svg>
+              </Button>
+            </td>
+            <td><span class="Button Button--batman"><svg width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)"><path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g></svg></span></td>
+            <td>
+              <span class="Button Button--batman" role="Button" tabindex="0">
+                <svg aria-labelledby="svgtitle" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+                  <title id="svgtitle">Batman</title>
+                  <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+                </svg>
+              </span>
+            </td>
+          </tr>
+          <!-- Row with CODE for icon Button -->
+          <tr aria-hidden="true">
               <td><label for="">code</label></td>
               <td>
     <pre>
     <code>
     &lt;Button type="Button"&gt;
-      Click me!
+      &lt;svg&gt;&lt;/svg&gt;
     &lt;/Button&gt;
     </code>
     </pre>
@@ -47,8 +196,14 @@
     <pre>
     <code>
     &lt;Button type="Button"
-            class="Button"&gt;
-      Click me!
+            class="Button
+            Button--batman"
+            <strong>aria-label="Batman"</strong>&gt;
+      &lt;span class="A11y-hidden"&gt;
+        Batman
+      &lt;/span&gt;
+      &lt;svg aria-hidden="true"&gt;
+      &lt;/svg&gt;
     &lt;/Button&gt;
     </code>
     </pre>
@@ -56,8 +211,9 @@
               <td>
     <pre>
     <code>
-    &lt;span class="Button"&gt;
-      Click me!
+    &lt;span class="Button
+          Button--batman"&gt;
+      &lt;svg&gt;&lt;/svg&gt;
     &lt;/span&gt;
     </code>
     </pre>
@@ -65,239 +221,80 @@
               <td>
     <pre>
     <code>
-    &lt;span class="Button"
+    &lt;span class="Button
+          Button--batman"
           role="Button"
           tabindex="0"&gt;
-      Click me!
+      &lt;svg <strong>aria-labelledby</strong>="
+          svgtitle"&gt;
+          &lt;title <strong>id="svgtitle"</strong>&gt;
+            Batman
+          &lt;/title&gt;
+      &lt;/svg&gt;
     &lt;/span&gt;
     </code>
     </pre>
               </td>
             </tr>
-            <!-- Row with disabled text Button -->
-            <tr>
-              <td><label for="">Disabled Button</label></td>
-              <td><Button type="Button" disabled="disabled">Click me!</Button></td>
-              <td><Button type="Button" disabled="disabled" class="Button Button--ghost">Click me!</Button></td>
-              <td><span class="Button Button--ghost Button--disabled" onClick="alert('click!');">Click me!</span></td>
-              <td><span class="Button Button--ghost Button--disabled" onClick="alert('click!');" role="Button" tabindex="0" aria-disabled="true">Click me!</span></td>
-            </tr>
-            <!-- Row with CODE for disabled text Button -->
-            <tr aria-hidden="true">
-              <td><label for="">code</label></td>
-              <td>
-    <pre>
-    <code>
-    &lt;Button type="Button"
-            disabled="disabled"&gt;
-      Click me!
-    &lt;/Button&gt;
-    </code>
-    </pre>
-              </td>
-              <td>
-    <pre>
-    <code>
-    &lt;Button type="Button"
-            class="Button"
-            disabled="disabled"&gt;
-      Click me!
-    &lt;/Button&gt;
-    </code>
-    </pre>
-              </td>
-              <td>
-    <pre>
-    <code>
-    &lt;span class="Button
-          Button--disabled"&gt;
-      Click me!
-    &lt;/span&gt;
-    </code>
-    </pre>
-              </td>
-              <td>
-    <pre>
-    <code>
-    &lt;span class="Button
-          Button--disabled"
-          role="Button"
-          tabindex="0"
-          aria-disabled="true"&gt;
-      Click me!
-    &lt;/span&gt;
-    </code>
-    </pre>
-              </td>
-            </tr>
-            <!-- Row with icon Button -->
-            <tr>
-              <td><label for="">Button with icon</label></td>
-              <td>
-                <Button type="Button">
-                  <svg  width="100"
-                        height="56.785"
-                        version="1.1"
-                        viewBox="0 0 1000 567.849"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:cc="http://creativecommons.org/ns#"
-                        xmlns:dc="http://purl.org/dc/elements/1.1/"
-                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                    <g transform="translate(0 -484.51)">
-                      <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/>
-                      <path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="#fff"/>
-                      <path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/>
-                    </g>
-                  </svg>
-                </Button>
-              </td>
-              <td>
-                <Button type="Button" class="Button Button--batman" aria-label="Batman">
-                  <span class="A11y-hidden">Batman</span>
-                  <svg  aria-hidden="true"
-                        width="100"
-                        height="56.785"
-                        version="1.1"
-                        viewBox="0 0 1000 567.849"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:cc="http://creativecommons.org/ns#"
-                        xmlns:dc="http://purl.org/dc/elements/1.1/"
-                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                    <g transform="translate(0 -484.51)">
-                      <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/>
-                      <path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/>
-                      <path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/>
-                    </g>
-                  </svg>
-                </Button>
-              </td>
-              <td><span class="Button Button--batman"><svg width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)"><path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g></svg></span></td>
-              <td>
-                <span class="Button Button--batman" role="Button" tabindex="0">
-                  <svg aria-labelledby="svgtitle" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-                    <title id="svgtitle">Batman</title>
-                    <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-                  </svg>
-                </span>
-              </td>
-            </tr>
-            <!-- Row with CODE for icon Button -->
-            <tr aria-hidden="true">
-                <td><label for="">code</label></td>
-                <td>
-      <pre>
-      <code>
-      &lt;Button type="Button"&gt;
-        &lt;svg&gt;&lt;/svg&gt;
-      &lt;/Button&gt;
-      </code>
-      </pre>
-                </td>
-                <td>
-      <pre>
-      <code>
-      &lt;Button type="Button"
-              class="Button
-              Button--batman"
-              <strong>aria-label="Batman"</strong>&gt;
-        &lt;span class="A11y-hidden"&gt;
-          Batman
-        &lt;/span&gt;
-        &lt;svg aria-hidden="true"&gt;
-        &lt;/svg&gt;
-      &lt;/Button&gt;
-      </code>
-      </pre>
-                </td>
-                <td>
-      <pre>
-      <code>
-      &lt;span class="Button
-            Button--batman"&gt;
-        &lt;svg&gt;&lt;/svg&gt;
-      &lt;/span&gt;
-      </code>
-      </pre>
-                </td>
-                <td>
-      <pre>
-      <code>
-      &lt;span class="Button
-            Button--batman"
-            role="Button"
-            tabindex="0"&gt;
-        &lt;svg <strong>aria-labelledby</strong>="
-            svgtitle"&gt;
-            &lt;title <strong>id="svgtitle"</strong>&gt;
-              Batman
-            &lt;/title&gt;
-        &lt;/svg&gt;
-      &lt;/span&gt;
-      </code>
-      </pre>
-                </td>
-              </tr>
-          </tbody>
-        </table>
-
-        <section class="SectionBatman">
-          <h2 class="SectionBatman__title">You probably seen it coming by now... (PS: don't do this in your projects)</h2>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle1" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle1">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle2" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle2">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle3" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle3">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle4" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle4">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle5" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle5">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle6" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle6">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle7" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle7">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle8" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle8">Nah</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-          <span class="Button Button--batman" tabindex="0">
-            <svg aria-labelledby="svgtitle9" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
-              <title id="svgtitle9">Batman</title>
-              <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="#FFDF00"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
-            </svg>
-          </span>
-        </section>
-      </div>
+        </tbody>
+      </table>
+      <section class="SectionBatman">
+        <h2 class="SectionBatman__title">You probably seen it coming by now... (PS: don't do this in your projects)</h2>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle1" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle1">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle2" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle2">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle3" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle3">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle4" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle4">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle5" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle5">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle6" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle6">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle7" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle7">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle8" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle8">Nah</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="currentColor"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+        <span class="Button Button--batman" tabindex="0">
+          <svg aria-labelledby="svgtitle9" width="100" height="56.785" version="1.1" viewBox="0 0 1000 567.849" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -484.51)">
+            <title id="svgtitle9">Batman</title>
+            <path d="m500 1052.4c-275.71 0-500-127.36-500-283.91 0-156.55 224.29-283.93 500-283.93 275.71 0 500 127.38 500 283.93 0 156.56-224.29 283.91-500 283.91"/><path d="m985.98 768.45c0 149.05-217.58 269.89-485.98 269.89-268.39 0-485.97-120.85-485.97-269.89 0-149.07 217.58-269.91 485.97-269.91 268.4 0 485.98 120.84 485.98 269.91" fill="#FFDF00"/><path d="m687.1 557.47s54.645 62.929 13.257 110.94c-41.403 48.023-112.59 33.119-129.15 13.247-16.562-19.868-19.863-149.02-19.863-149.02l-33.125 61.262h-36.425l-33.123-61.262s-3.3037 129.15-19.863 149.02c-16.561 19.872-87.752 34.776-129.16-13.247-41.387-48.015 13.244-110.94 13.244-110.94s-253.33 62.929-253.33 206.97c0 144.06 175.52 190.42 175.52 190.42-24.843-16.558-49.684-86.103 6.6211-104.31 56.29-18.222 105.97 41.383 105.97 41.383s3.1205-33.895 54.631-36.426c67.887-3.3154 97.691 117.56 97.691 117.56s29.804-120.88 97.692-117.56c51.509 2.5311 54.645 36.426 54.645 36.426s49.668-59.605 105.98-41.383c56.289 18.205 31.462 87.75 6.621 104.31 0 0 175.52-46.363 175.52-190.42 0-144.04-253.35-206.97-253.35-206.97"/></g>
+          </svg>
+        </span>
+      </section>
     </main>
     <footer class="Footer" role="contentinfo">
       <p class="Footer-text" aria-label="Made with love by Rah zvan Row shoe">Made with &lt;3 by Răzvan Roșu</p>
