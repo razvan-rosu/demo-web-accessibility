@@ -1,4 +1,7 @@
 .Accessibility--demo3 {
+  header h1 {
+    text-align: center;
+  }
 
   table, tr {
     width: 100%;
@@ -14,6 +17,7 @@
     text-align: center;
 
     &:first-child {
+      width: auto;
       text-align: right;
     }
 
