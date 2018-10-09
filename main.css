@@ -613,6 +613,10 @@ body {
   background-color: #0F0;
 }
 
+.Accessibility--demo3 header h1 {
+  text-align: center;
+}
+
 .Accessibility--demo3 table, .Accessibility--demo3 tr {
   width: 100%;
   max-width: 100%;
@@ -628,6 +632,7 @@ body {
 }
 
 .Accessibility--demo3 th:first-child, .Accessibility--demo3 td:first-child {
+  width: auto;
   text-align: right;
 }
 
