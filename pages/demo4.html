@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo 4</title>
+    <script src="dialog.js"></script>
 </head>
 <body>
     <h1>Demo 4</h1>
+    <button type="button" class="open">Open</button>
+    <x-modal title="Web Component Modal window">
+        <p>Slotted content</p>
+    </x-modal>
+
+    <script>
+        modal = document.querySelector("x-modal");
+        modal.addEventListener("cancel", function () {
+            console.log("cancel event raised");
+        });
+        modal.addEventListener("ok", function () {
+            console.log("ok event raised");
+        });
+        
+        open = document.querySelector(".open");
+        open.addEventListener("click", function () {
+            modal.visible = true;
+        });
+        </script>
 </body>
 </html>
