@@ -391,6 +391,112 @@ body {
   color: #fff;
 }
 
+.Landingpage .Navigation {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.Landingpage .Navigation-button {
+  margin: 5px 25px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Landingpage .Navigation-button {
+    display: none;
+  }
+}
+
+.Landingpage .Navigation-button[aria-expanded="true"] .Navigation-buttonBar--first {
+  -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+          transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+.Landingpage .Navigation-button[aria-expanded="true"] .Navigation-buttonBar--mid {
+  opacity: 0;
+}
+
+.Landingpage .Navigation-button[aria-expanded="true"] .Navigation-buttonBar--last {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.Landingpage .Navigation-buttonBar {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.Landingpage .Navigation-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Landingpage .Navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.Landingpage .Navigation.Navigation--closed .Navigation-list {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Landingpage .Navigation.Navigation--closed .Navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.Landingpage .Navigation-listItem {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-top: 1px solid #000;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Landingpage .Navigation-listItem {
+    border-top: none;
+  }
+}
+
+.Landingpage .Navigation-listLink {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .Landingpage .Navigation-listLink {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
 .Landingpage .MainContent-list {
   list-style-type: none;
   padding-left: 0;
