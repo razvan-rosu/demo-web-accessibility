@@ -10,16 +10,24 @@
   </head>
   <body class="Landingpage">
     <header class="Header" aria-labelledby="Header-label">
-      <h1 class="Header-title" id="Header-label">Web accessibility demos</h1>
+      <h1 class="Header-title" id="header-label">Web accessibility demos</h1>
     </header>
 
-    <nav role="navigation" class="Navigation">
-      <ol role="menu" aria-label="Website Menu">
-        <li role="menuitem"><a href="pages/demo1.html">Demo 1: Semantic HTML 4 CV</a></li>
-        <li role="menuitem"><a href="pages/demo2.html">Demo 2: Semantic HTML 5 CV</a></li>
-        <li role="menuitem"><a href="pages/demo3.html">Demo 3: WAI-ARIA buttons</a></li>
-        <li role="menuitem"><a href="pages/demo4.html">Demo 4: Web Components dialog</a></li>
-      </ol>
+    <nav role="navigation" id="nav" class="Navigation Navigation--closed">
+      <div class="container">
+        <button type="button" id="burger-toggle" class="Navigation-button" aria-expanded="false" aria-controls="menu">
+          <span class="A11y-hidden">Menu</span>
+          <span class="Navigation-buttonBar Navigation-buttonBar--first"></span>
+          <span class="Navigation-buttonBar Navigation-buttonBar--mid"></span>
+          <span class="Navigation-buttonBar Navigation-buttonBar--last"></span>
+        </button>
+        <ul id="menu" class="Navigation-list">
+          <li class="Navigation-listItem" role="menuitem"><a class="Navigation-listLink" href="pages/demo1.html">HTML 4 CV</a></li>
+          <li class="Navigation-listItem" role="menuitem"><a class="Navigation-listLink" href="pages/demo2.html">Semantic HTML 5 CV</a></li>
+          <li class="Navigation-listItem" role="menuitem"><a class="Navigation-listLink" href="pages/demo3.html">WAI-ARIA buttons</a></li>
+          <li class="Navigation-listItem" role="menuitem"><a class="Navigation-listLink" href="pages/demo4.html">Web Components</a></li>
+        </ul>
+      </div>
     </nav>
 
     <main class="MainContent" role="main" aria-labelledby="Main-label">
@@ -55,5 +63,25 @@
     <footer class="Footer" role="contentinfo">
       <p class="Footer-text" aria-label="Made with love by Rhahzvan Row shoe">Made with &lt;3 by Răzvan Roșu</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", pageLoaded);
+
+      function pageLoaded() {
+        var btn = document.getElementById('burger-toggle');
+        btn.addEventListener('click', btnEventHandler);
+      }
+
+      function btnEventHandler(event) {
+        var burger = document.getElementById('burger-toggle');
+        var nav = document.getElementById('nav');
+
+        var isMenuVisible = burger.getAttribute('aria-expanded') == 'false';
+        var newBurgerState = !!isMenuVisible;
+
+        burger.setAttribute("aria-expanded", newBurgerState);
+        (newBurgerState) ? nav.classList.remove('Navigation--closed') : nav.classList.add('Navigation--closed');
+      }
+    </script>
   </body>
 </html>
