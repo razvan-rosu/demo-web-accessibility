@@ -9,24 +9,46 @@
 </head>
 <body>
     <h1>Demo 4</h1>
-    <button type="button" class="open">Open</button>
-    <x-modal title="Web Component Modal window">
+    <button type="button" id="webcompBtn">Open Web Component dialog</button>
+    <x-modal title="Web Component Modal window" aria-hidden="true">
         <p>Slotted content</p>
     </x-modal>
 
+    <button type="button" id="nativeDialogBtn">Open native dialog</button>
+    <dialog id="nativeDialog" role="dialog" aria-labelledby="nativeDialogTitle" aria-describedby="nativeDialogDescription">
+        <form method="dialog">
+            <h1 id="nativeDialogTitle">Native dialog title</h1>
+            <p id="nativeDialogDescription">Native dialog content</p>
+            <button type="button" class="closeNativeDialog">Cancel</button>            
+        </form>
+    </dialog>
+
     <script>
-        modal = document.querySelector("x-modal");
-        modal.addEventListener("cancel", function () {
+        // web component
+        webcomp = document.querySelector("x-modal");
+        webcomp.addEventListener("cancel", function () {
             console.log("cancel event raised");
         });
-        modal.addEventListener("ok", function () {
+        webcomp.addEventListener("ok", function () {
             console.log("ok event raised");
         });
         
-        open = document.querySelector(".open");
-        open.addEventListener("click", function () {
-            modal.visible = true;
+        webcompBtn = document.getElementById("webcompBtn");
+        webcompBtn.addEventListener("click", function () {
+            webcomp.visible = true;
         });
-        </script>
+
+        // native
+        native = document.getElementById('nativeDialog');
+        nativeBtn = document.getElementById('nativeDialogBtn');
+        nativeBtn.addEventListener("click", function() {
+            native.getAttribute('open') ? native.removeAttribute('open','true') : native.setAttribute('open','true');
+        });
+
+        nativeClose = document.querySelector('.closeNativeDialog');
+        nativeClose.addEventListener('click', function() {
+            native.removeAttribute('open');
+        });
+    </script>
 </body>
 </html>
