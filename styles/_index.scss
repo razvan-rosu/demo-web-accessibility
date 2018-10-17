@@ -14,6 +14,82 @@
     }
   }
 
+  .Navigation {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+
+    &-button {
+      margin: 5px 25px;
+      border: 1px solid #000;
+      border-radius: 3px;
+
+      @media only screen and (min-width: 1024px) {
+        display: none;
+      }
+
+      &[aria-expanded="true"] {
+        .Navigation-buttonBar--first {transform: rotate(-45deg) translate(-9px, 7px);}
+        .Navigation-buttonBar--mid {opacity: 0;}
+        .Navigation-buttonBar--last {transform: rotate(45deg) translate(-8px, -8px);}
+      }
+    }
+
+    &-buttonBar {
+      display: block;
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    &-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      @media only screen and (min-width: 1024px) {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+      }
+    }
+
+    &.Navigation--closed .Navigation-list {
+      display: none;
+
+      @media only screen and (min-width: 1024px) {
+        display: flex;
+      }
+    }
+
+    &-listItem {
+      flex-basis: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      border-top: 1px solid #000;
+      
+      @media only screen and (min-width: 1024px) {
+        border-top: none;
+      }
+    }
+
+    &-listLink {
+      display: block;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      @media only screen and (min-width: 1024px) {
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+
   .MainContent {
 
     &-list {
